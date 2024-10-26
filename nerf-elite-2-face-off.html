@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite 2.0 Face Off</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://logo-marque.com/wp-content/uploads/2021/09/Nerf-Logo.png">
+</head>
+<body class="home">
+
+    <!-- Top Bar Section -->
+    <div id="topbar" class="fixed-top">
+        <div class="container">
+            <h4 class="top-bar-text">
+                <p>◀ Hinnad -90% SUPERPAKKUMISED    ֍    Kuni kampaania lõpuni 28.12.2024 ▶</p>
+            </h4>
+            <p class="top-bar-text"> Saadame ka välismaale ITELLA SmartPost-iga pakiautomaati ֍ Maksevõimalusi laialdaselt</p>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container top-header">
+            <a href="index.html" class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Nerf_logo.svg/675px-Nerf_logo.svg.png" alt="Nerf Logo">
+            </a>
+            <nav class="top-menu">
+                <ul>
+                    <li><a href="minu-konto.html">Logi sisse</a></li>
+                    <li><a href="kkk.html">KKK</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Hamburger Icon for Mobile Menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Main Menu -->
+        <nav class="main-menu">
+            <ul class="menu">
+                <li><a href="index.html">Avaleht</a></li>
+                <li>
+                    <a href="pood.html" class="dropdown-toggle">
+                        <span class="submenu-toggle">E-pood</span>
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="veepustolid.html">Veepüstolid</a></li>
+                        <li><a href="kingitused.html">Kingitused</a></li>
+                        <li><a href="vaiksematele.html">Väiksematele</a></li>
+                        <li><a href="soodustused.html">Soodustused</a></li>
+                    </ul>
+                </li>
+                <li><a href="tellimisinfo.html">Tellimisinfo</a></li>
+                <li><a href="edasimuuja.html">Edasimüüjale</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="main-container">
+        <!-- Product Detail Section -->
+        <section class="product-detail">
+            <div class="product-image-container">
+                <img src="https://www.xsmanguasjad.ee/media/catalog/product/cache/e6fea8d63c738f4675482994036e599d/F/8/F8273_pkg_22_Medium_150DPI_1.jpg" alt="Amb püstol nooltega" class="product-image">
+            </div>
+            <div class="product-text-content">
+                <h1>Elite 2.0 Mängukomplekt Face Off</h1>
+                <p class="product-price">Hind: 15.99€</p>
+                <p class="product-description">XS Klubi hind 14.99 €</p>
+    
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="quantity-add-cart">
+                    <div class="quantity-selector">
+                        <button class="qty-btn" onclick="decreaseQty()">-</button>
+                        <input type="number" id="qty" value="1" min="1" class="qty-input">
+                        <button class="qty-btn" onclick="increaseQty()">+</button>
+                    </div>
+                    <button class="add-to-cart-button">Lisa ostukorvi</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section large">
+                <h3>Ajalugu</h3>
+                <p>NERF alustas vahtpallide tootmisega 1970ndatel, laienedes hiljem vahtrelvadele ja saades mänguasjatööstuse hitiks. Nüüd tuntakse seda lõbusate ja turvaliste mänguasjade poolest. 🎯</p>
+            </div>
+            <div class="footer-section small">
+                <h3>Info</h3>
+                <ul>
+                    <li><a href="edasimuuja.html">Edasimüüjale</a></li>
+                    <li><a href="pood.html">Pood</a></li>
+                    <li><a href="tellimisinfo.html">Tellimisinfo</a></li>
+                </ul>
+            </div>
+            <div class="footer-section small">
+                <h3>Võta ühendust</h3>
+                <ul>
+                    <li>E-post: info@NerfOffical.com</li>
+                    <li>Telefon: (372) 55612873</li>
+                    <li>Aadress: Gonsori 31, Tallinn, Estonia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nerf. Kõik õigused kaitstud.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Code -->
+    <script>
+        // Toggle the main menu
+        function toggleMenu() {
+            const menu = document.querySelector('.main-menu');
+            menu.classList.toggle('menu-active');
+        }
+
+        // Toggle the dropdown submenus
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const dropdown = event.target.closest('li').querySelector('.dropdown');
+            const toggleIcon = event.target;
+            
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+                toggleIcon.textContent = '+';
+            } else {
+                dropdown.style.display = 'block';
+                toggleIcon.textContent = '–';
+            }
+        }
+    </script>
+
+</body>
+</html>
